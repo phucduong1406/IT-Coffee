@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The IT Coffee</title>
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Baloo+Tamma|Homemade+Apple|Francois+One|Montserrat|Muli" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url("fonts/muli.ttf");
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            color: #343536;
+            font-family: myFont, sans-serif;
+        }
+        button {
+            border: none;
+            padding: 0.6em 1.2em;
+            background: #c0392b;
+            color: #fff;
+            font-family: myFont, sans-serif;
+            font-size: 1em;
+            letter-spacing: 1px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 3px 2px;
+        }
+        button:hover {
+            background-color: #a5281b;
+        }
+        /*HEADER*/
+        #header {
+            background: #343536;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        #logo {
+            float: left;
+            padding-top: 3px;
+        }
+        #menu {
+            float: right;
+        }
+        #menu ul {
+            background: #343536;
+            list-style-type: none;
+            text-align: center;
+            width: 100%;
+        }
+        #menu li {
+            display: inline-block;
+            width: 110px;
+            height: 60px;
+            line-height: 60px;
+            /*bằng height để canh giữa*/
+            position: relative;
+        }
+        #menu a {
+            text-decoration: none;
+            /*bỏ under line*/
+            color: #fff;
+            display: block;
+        }
+        #menu a:hover {
+            background: #fff;
+            /*background khi rê chuột*/
+            color: #343536;
+            /*color khi rê chuột*/
+        }
+        .sub_menu {
+            display: none;
+            position: absolute;
+        }
+        #menu li:hover .sub_menu {
+            display: block;
+        }
+        /*CONTENT*/
+        #div_1 {
+            height: auto;
+            position: relative;
+            margin-bottom: -6px;
+            /*xóa cái trắng thừa dưới*/
+        }
+        .title {
+            color: white;
+            font-family: "Montserrat", sans-serif;
+            position: relative;
+            text-align: center;
+            font-size: 30pt;
+            cursor: pointer;
+            top: 375px;
+        }
+        h1.title {
+            transform: color 2s;
+            -moz-transition: color 2s;
+            -webkit-transition: color 2s;
+        }
+        h1.title:hover {
+            color: rgba(225, 225, 225, 0);
+        }
+        p.title {
+            margin: 20px;
+        }
+        img.title {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            /*căn giữa*/
+            margin-bottom: -125px;
+            cursor: pointer;
+        }
+        #logo_white {
+            position: relative;
+            top: 250px;
+        }
+        #div_2 {
+            background-image: url("images/sports.png");
+            background-repeat: repeat;
+            line-height: 28px;
+            padding: 75px 175px;
+            color: #343536;
+            font-family: myFont, sans-serif;
+            height: 250px;
+            text-align: center;
+        }
+        #div_2 h2 {
+            color: #e74c3c;
+            font-family: "Homemade Apple";
+            font-size: 25pt;
+            padding-bottom: 50px;
+        }
+        #div_2 p {
+            padding-bottom: 15px;
+        }
+        #div_3 {
+            font-family: "Montserrat", sans-serif;
+            line-height: 50px;
+            text-align: center;
+            background-image: url("images/bg_home.jpg");
+            height: 470px;
+            padding: 30px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+        #div_3 h2:hover {
+            transform: all 0.1s;
+            -moz-transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+        }
+        #div_3 h2:hover {
+            text-decoration-line: overline;
+            font-size: 25pt;
+        }
+        /*FOOTER*/
+        #footer {
+            position: relative;
+            padding: 25px;
+            color: white;
+            background: #343536;
+            height: 200px;
+            text-align: center;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /*để padding k bị tràn ra ngoài*/
+        }
+        #footer p {
+            padding: 7px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /*để padding k bị tràn ra ngoài*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <!--<img src="http://bit.ly/2pLPVew" alt="The IT Coffee" width="260" height="50px"/>-->
+            <img src="images/logo.jpg" alt="The IT Coffee" width="260" height="50px" />
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html"><b>HOME</b></a>
+
+                </li>
+                <li><a href="about.html"><b>ABOUT</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="about.html#div_2"><b>HISTORY</b></a>
+                        </li>
+                        <li><a href="about.html#div_2"><b>OPENING H.</b></a>
+                        </li>
+                        <li><a href="about.html#div_2"><b>LOCATION</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="menu.html"><b>MENU</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="menu.html#drink"><b>DRINK</b></a>
+                        </li>
+                        <li><a href="menu.html#food"><b>FOOD</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="space.html"><b>SPACE</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="space.html#div_3"><b>GARDEN</b></a>
+                        </li>
+                        <li><a href="space.html#div_4"><b>ROOM</b></a>
+                        </li>
+                        <li><a href="space.html#div_5"><b>ROOFTOP</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="service.html"><b>SERVICE</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="service.html#div_3"><b>BIRTHDAY</b></a>
+                        </li>
+                        <li><a href="service.html#div_4"><b>TRAINING</b></a>
+                        </li>
+                        <li><a href="service.html#div_5"><b>OFFLINE</b></a>
+                        </li>
+                        <li><a href="service.html#div_6"><b>OTHERS</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="news.html"><b>NEWS</b></a>
+                </li>
+                <li><a href="contact.html"><b>CONTACT</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="contact.html#div_3"><b>CONTACT</b></a>
+                        </li>
+                        <li><a href="contact.html#div_3"><b>COMMENT</b></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="contain">
+        <div class="md-modal md-effect-15" id="modal-15">
+            <div class="md-content">
+                <h3><b>WELLCOME</b></h3>
+                <div>
+                    <p>Wellcome to "The IT Coffee"</p>
+                    <ul>
+                        <li><strong>Address:</strong> 484 Le Van Viet, District 9, HCMC</li>
+                        <li><strong>Hotline:</strong> 08 00 000 000</li>
+                    </ul>
+                    <button class="md-close">CLOSE</button>
+                </div>
+            </div>
+        </div>
+        <div id="div_1">
+            <!--<img class="title" id="logo_white" src="http://bit.ly/2paPNkP" alt="The Coffee IT" height="125px"/> -->
+            <img class="md-trigger title" id="logo_white" src="images/logo_white.png" alt="The Coffee IT" height="125px" data-modal="modal-15">
+            <h1 class="title">FINAL PROJECT - WEB DESIGN - GROUP 5</h1>
+            <img id="banner" src="images/banner_home.jpg" width=100%/>
+            <script src="js/classie.js"></script>
+            <script src="js/modalEffects.js"></script>
+        </div>
+        <div id="div_2">
+            <h2>Cà phê nhé!</h2>
+            <p><i>“Đi cà phê”</i> từ lâu không chỉ đơn thuần là uống một tách cà phê mà còn là dịp gặp mặt và trò chuyện cùng bạn bè.</p>
+            <p>Tại The IT Coffee, chúng tôi trân trọng và đề cao giá trị kết nối giữa con người và trải nghiệm của khách hàng.</p>
+            <p>Chúng tôi được truyền cảm hứng từ những tách cà phê và thức uống mình tạo ra. Chúng tôi tin tưởng mạnh mẽ rằng những thức uống với chất lượng tốt nhất được phục vụ trong không gian thân thiện bởi những nhân viên tận tâm tại The IT Coffee sẽ mang lại những niềm vui bạn có thể chia sẻ cùng bạn bè và gia đình.</p>
+        </div>
+        <div id="div_3">
+
+            <h2>THE IT COFFEE DELIVERY</h2>
+            <p>Đặt món giao tận nơi tại order.theitcoffee.vn hoặc gọi 08 00 000 000 khi bạn cần giao hàng tận nơi nhé!</p>
+            <p>_____________________________________________________</p>
+            <h2>FULL PRESS</h2>
+            <p>A Journal of stories that matter to us. We think good stories, like good coffee, are best shared.</p>
+            <br>
+        </div>
+    </div>
+    <div id="footer">
+        <h2>THE IT COFFEE</h2>
+        <p>484 Le Van Viet, District 9, HCMC</p>
+        <p>Hotline: 08 00 000 000</p>
+        <hr/>
+        <br/>
+        <p id="copyrighted">© 2017 The Coffee IT. All Rights Reserved.</p>
+    </div>
+    <!--
+    <script>
+        alert("Hello");
+        alert("Wellcome to The IT Coffee");
+    </script>
+    -->
+</body>
+
+</html>

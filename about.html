@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>About - The IT Coffee</title>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Baloo+Tamma|Homemade+Apple|Francois+One|Montserrat|Muli" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url("fonts/muli.ttf");
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            color: #343536;
+            font-family: myFont, sans-serif;
+        }
+        /*HEADER*/
+        #header {
+            background: #343536;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        #logo {
+            float: left;
+            padding-top: 3px;
+        }
+        #menu {
+            float: right;
+        }
+        #menu ul {
+            background: #343536;
+            list-style-type: none;
+            text-align: center;
+            width: 100%;
+        }
+        #menu li {
+            display: inline-block;
+            width: 110px;
+            height: 60px;
+            line-height: 60px;
+            /*bằng height để canh giữa*/
+            position: relative;
+        }
+        #menu a {
+            text-decoration: none;
+            /*bỏ under line*/
+            color: #fff;
+            display: block;
+        }
+        #menu a:hover {
+            background: #fff;
+            /*background khi rê chuột*/
+            color: #343536;
+            /*color khi rê chuột*/
+        }
+        .sub_menu {
+            display: none;
+            position: absolute;
+        }
+        #menu li:hover .sub_menu {
+            display: block;
+        }
+        /*CONTENT*/
+        #div_1 {
+            height: auto;
+            position: relative;
+            margin-bottom: -6px;
+            /*xóa cái trắng thừa dưới*/
+        }
+        #title {
+            color: white;
+            font-family: "Archivo Black", "Montserrat", sans-serif;
+            font-size: 50pt;
+            cursor: pointer;
+            /*đổi con trỏ chuột khi di chuyển đến*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            -moz-transition: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+        }
+        #title:hover {
+            text-decoration-line: overline;
+        }
+        #div_2 {
+            height: 600px;
+            font-size: 14pt;
+            text-align: center;
+            background-image: url("images/bg_about.jpg");
+            background-repeat: repeat;
+            overflow: auto;
+            margin: 10px auto;
+        }
+        #div_2 .col {
+            float: left;
+            width: 27%;
+            margin: 50px;
+        }
+        #div_2 .col:last-child {
+            float: right;
+            margin-right: 0;
+        }
+        #div_2 h1 {
+            color: #e74c3c;
+            font-family: "Francois One";
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        #div_2 p {
+            padding-bottom: 10px;
+            line-height: 27px;
+        }
+        /*FOOTER*/
+        #footer {
+            position: relative;
+            padding: 25px;
+            color: white;
+            background: #343536;
+            height: 200px;
+            text-align: center;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /*để padding k bị tràn ra ngoài*/
+        }
+        #footer p {
+            padding: 7px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /*để padding k bị tràn ra ngoài*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <!--<img src="http://bit.ly/2pLPVew" alt="The IT Coffee" width="260" height="50px"/>-->
+            <img src="images/logo.jpg" alt="The IT Coffee" width="260" height="50px" />
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html"><b>HOME</b></a>
+
+                </li>
+                <li><a href="about.html"><b>ABOUT</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="about.html#div_2"><b>HISTORY</b></a>
+                        </li>
+                        <li><a href="about.html#div_2"><b>OPENING H.</b></a>
+                        </li>
+                        <li><a href="about.html#div_2"><b>LOCATION</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="menu.html"><b>MENU</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="menu.html#drink"><b>DRINK</b></a>
+                        </li>
+                        <li><a href="menu.html#food"><b>FOOD</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="space.html"><b>SPACE</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="space.html#div_3"><b>GARDEN</b></a>
+                        </li>
+                        <li><a href="space.html#div_4"><b>ROOM</b></a>
+                        </li>
+                        <li><a href="space.html#div_5"><b>ROOFTOP</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="service.html"><b>SERVICE</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="service.html#div_3"><b>BIRTHDAY</b></a>
+                        </li>
+                        <li><a href="service.html#div_4"><b>TRAINING</b></a>
+                        </li>
+                        <li><a href="service.html#div_5"><b>OFFLINE</b></a>
+                        </li>
+                        <li><a href="service.html#div_6"><b>OTHERS</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="news.html"><b>NEWS</b></a>
+                </li>
+                <li><a href="contact.html"><b>CONTACT</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="contact.html#div_3"><b>CONTACT</b></a>
+                        </li>
+                        <li><a href="contact.html#div_3"><b>COMMENT</b></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="contain">
+        <div id="div_1">
+            <img id="banner" src="images/banner_about.jpg" alt="Contact" width="100%">
+            <h1 id="title">ABOUT US</h1>
+        </div>
+        <div id="div_2">
+            <div id="box_1" class="col">
+                <img src="images/info_orange_e74c3c.png" width="100px" />
+                <h1>HISTORY</h1>
+                <p><b>The Coffee IT</b> được sinh ra từ niềm đam mê bất tận với hạt cà phê Việt Nam.</p>
+                <p>Bắt đầu với sản phẩm cà phê đóng gói vào năm <b>2017</b>, chúng tôi đang dần nhanh chóng phát triển và mở rộng thành thương hiệu cà phê nổi tiếng.</p>
+            </div>
+            <div id="box_2" class="col">
+                <img src="images/clock_orange_e74c3c.png" width="100px" />
+                <h1>OPENING HOURS</h1>
+                <p>Monday - Sartuday: <b>6:00 - 22:00</b>
+                </p>
+                <p>Sunday: <b>6:00 - 23:00</b>
+                </p>
+            </div>
+            <div id="box_3" class="col">
+                <img src="images/location_orange_e74c3c.png" width="100px" />
+                <h1>LOCATION</h1>
+                <p>Address:</p>
+                <p><b>484 Le Van Viet, District 9, HCMC</b>
+                </p>
+                <p>Map:</p>
+                <iframe src=" http://bit.ly/2pfm8rK" width="280" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <h2>THE IT COFFEE</h2>
+        <p>484 Le Van Viet, District 9, HCMC</p>
+        <p>Hotline: 08 00 000 000</p>
+        <hr/>
+        <br/>
+        <p id="copyrighted">© 2017 The IT Coffee. All Rights Reserved.</p>
+    </div>
+    <!--<script>
+            alert("Hello");
+        </script> -->
+</body>
+
+</html>

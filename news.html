@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>News - The IT Coffee</title>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Baloo+Tamma|Homemade+Apple|Francois+One|Montserrat|Muli" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url("fonts/muli.ttf");
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            color: #343536;
+            font-family: myFont, sans-serif;
+        }
+        /*HEADER*/
+        #header {
+            background: #343536;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        #logo {
+            float: left;
+            padding-top: 3px;
+        }
+        #menu {
+            float: right;
+        }
+        #menu ul {
+            background: #343536;
+            list-style-type: none;
+            text-align: center;
+            width: 100%;
+        }
+        #menu li {
+            display: inline-block;
+            width: 110px;
+            height: 60px;
+            line-height: 60px;
+            /*bằng height để canh giữa*/
+            position: relative;
+        }
+        #menu a {
+            text-decoration: none;
+            /*bỏ under line*/
+            color: #fff;
+            display: block;
+        }
+        #menu a:hover {
+            background: #fff;
+            /*background khi rê chuột*/
+            color: #343536;
+            /*color khi rê chuột*/
+        }
+        .sub_menu {
+            display: none;
+            position: absolute;
+        }
+        #menu li:hover .sub_menu {
+            display: block;
+        }
+        /*CONTENT*/
+        #div_1 {
+            height: auto;
+            position: relative;
+            margin-bottom: -6px;
+            /*xóa cái trắng thừa dưới*/
+        }
+        #title {
+            color: white;
+            font-family: "Archivo Black", "Montserrat", sans-serif;
+            font-size: 50pt;
+            cursor: pointer;
+            /*đổi con trỏ chuột khi di chuyển đến*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            -moz-transition: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+        }
+        #title:hover {
+            text-decoration-line: overline;
+        }
+        #div_2 {
+            padding: 50px;
+            text-indent: 50px;
+            line-height: 25px;
+        }
+        #div_2 a {
+            color: #343536;
+            transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -webkit-transform: all 0.5s;
+        }
+        #div_2 a:hover {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 16pt;
+        }
+        #div_2 h1,
+        #div_2 h4,
+        #div_2 h2 {
+            color: #e74c3c;
+            text-indent: 0px;
+        }
+        #img {
+            padding: 4% 20%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .left {
+            width: 22%;
+            float: left;
+            margin-bottom: 5px;
+        }
+        .right {
+            width: 74%;
+            float: right;
+        }
+        /*FOOTER*/
+        #footer {
+            position: relative;
+            padding: 25px;
+            color: white;
+            background: #343536;
+            height: 200px;
+            text-align: center;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /*để padding k bị tràn ra ngoài*/
+            clear: both;
+            /*để layout không nhảy lung tung khi tạo cột, phải thêm thuộc tính clear: both; sau khi chia cột xong.*/
+        }
+        #footer p {
+            padding: 7px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /*để padding k bị tràn ra ngoài*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <!--<img src="http://bit.ly/2pLPVew" alt="The IT Coffee" width="260" height="50px"/>-->
+            <img src="images/logo.jpg" alt="The IT Coffee" width="260" height="50px" />
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html"><b>HOME</b></a>
+
+                </li>
+                <li><a href="about.html"><b>ABOUT</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="about.html#div_2"><b>HISTORY</b></a>
+                        </li>
+                        <li><a href="about.html#div_2"><b>OPENING H.</b></a>
+                        </li>
+                        <li><a href="about.html#div_2"><b>LOCATION</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="menu.html"><b>MENU</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="menu.html#drink"><b>DRINK</b></a>
+                        </li>
+                        <li><a href="menu.html#food"><b>FOOD</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="space.html"><b>SPACE</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="space.html#div_3"><b>GARDEN</b></a>
+                        </li>
+                        <li><a href="space.html#div_4"><b>ROOM</b></a>
+                        </li>
+                        <li><a href="space.html#div_5"><b>ROOFTOP</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="service.html"><b>SERVICE</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="service.html#div_3"><b>BIRTHDAY</b></a>
+                        </li>
+                        <li><a href="service.html#div_4"><b>TRAINING</b></a>
+                        </li>
+                        <li><a href="service.html#div_5"><b>OFFLINE</b></a>
+                        </li>
+                        <li><a href="service.html#div_6"><b>OTHERS</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="news.html"><b>NEWS</b></a>
+                </li>
+                <li><a href="contact.html"><b>CONTACT</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="contact.html#div_3"><b>CONTACT</b></a>
+                        </li>
+                        <li><a href="contact.html#div_3"><b>COMMENT</b></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="contain">
+        <div id="div_1">
+            <img id="banner" src="images/banner_news.jpg" alt="Contact" width="100%">
+            <h1 id="title">NEWS</h1>
+        </div>
+        <div id="div_2">
+            <div class="left">
+                <h2>RECENT AETICLES</h2>
+                <br>
+                <a href="#arabica">Cà phê Arabica</a>
+                <br>
+                <i>Posted on May 04, 2017</i>
+                <br>
+                <br>
+                <a href="#robusta">Cà phê Robusta</a>
+                <br><i>Posted on May 05, 2017</i>
+                <br>
+                <br><a href="#cherry">Cà phê Cherry ( cà phê mít)</a>
+                <br><i>Posted on May 03, 2017</i>
+                <br>
+                <br><a href="#culi">Cà phê Culi</a>
+                <br><i>Posted on May 02, 2017</i>
+                <br>
+                <br><a href="#moka">Cà phê Moka </a>
+                <br><i>Posted on May 01, 2017</i>
+            </div>
+            <div class="right">
+                <div id="arabica">
+                    <h1>CÀ PHÊ ARABICA</h1>
+                    <h4>____________________________________________________________________________________________________________________</h4>
+                    <h4>MAY 07, 2017</h4>
+                    <br>
+                    <p>Là loại cà phê hạt hơi dài, được trồng ở độ cao trên 600m, khí hậu mát mẻ, được trồng chủ yếu ở Braxin, và chiếm tới 2/3 lượng cà phê hiện nay trên thế giới.</p>
+                    <img id="img" src="images/arabica.png" width="550px">
+                    <br>
+                    <p>Cách chế biến mới là điểm tạo ra sự khác biệt giữa Arabica va Robusta. Quả Arabica được thu hoạch, rồi lên men (ngâm nước cho nở...) rồi rửa sạch rồi sấy. Chính vì thế, vị của Arabica hơi chua, và đây cũng được coi là 1 đặc điểm cảm quan của loại cà phê này. Vì thế, nói đến "hậu vị" của cà phê là có thật, nhưng không phải là vị chua, mà phải chuyển từ chua sang đắng (kiểu socola ý, sau khi nuốt mới là cà phê ngon). Người ta thường ví vị chua đó giống như khi mình ăn chanh, sẽ thấy rất chua, nhưng lập tức thấy được vị đắng của vỏ. Cách cảm nhận vị chua của cà phê cũng như vậy.</p>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div id="robusta">
+                    <h1>CÀ PHÊ ROBUSTA</h1>
+                    <h4>____________________________________________________________________________________________________________________</h4>
+                    <h4>MAY 07, 2017</h4>
+                    <br>
+                    <p>Robusta là một trong các loại cà phê rất thích hợp với khí hậu, thổ nhưỡng tại vùng Tây Nguyên Việt Nam nhất là vùng đất bazan (Gia lai, Đắclắc) – hằng năm đạt 90-95% tổng sản lượng cà phê Việt Nam, mùi thơm nồng, không chua, độ cafein cao, thích hợp với khẩu vị người Việt, nhưng quá đậm đặc với người nước ngoài.</p>
+                    <br>
+                    <p>Trồng cà phê Robusta phải thâm canh mới đạt được năng suất cao vì trái đậu trên cành một lần, phải tạo cành mới (cành thứ cấp 1,2,3…). để đạt được yếu tố này, người nông dân phải có vốn, một kiến thức cơ bản. Thường thì mới năm thứ hai-thời kỳ kiến thiết cơ bản-người trồng đã thu hoạch, không hãm ngọn sớm nên đến năm thứ 1 kinh doanh (năm thứ 3 của cây trồng) cây đã yếu, có hình tán dù, thiếu cành thứ cấp.</p>
+                    <img id="img" src="images/robusta.jpg" width="550px">
+                    <p>Hạt nhỏ hơn Arabica, và được sấy trực tiếp, chứ không phải lên men, vị đắng chiếm chủ yếu, loại này uống đậm đà hơn. Được trồng ở độ cao dưới 600m, khí hậu nhiệt đới, vì thế có mặt ở nhiều nước hơn ( Ở Việt Nam loại này chiếm hơn 90% ). Việt Nam có tổng lượng chiếm 1/3 lượng cà phê tiêu thụ trên toàn thế giới.</p>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div id="cherry">
+                    <h1>CÀ PHÊ CHERY</h1>
+                    <h4>____________________________________________________________________________________________________________________</h4>
+                    <h4>MAY 07, 2017</h4>
+                    <br>
+                    <p>Trong các loại cafe việt nam thì Cherry hay còn gọi là cà phê mít gồm có 2 giống chính là Liberica và Exelsa. Loại này không được phổ biến lắm, nhưng đây là loại có khả năng chống chịu sâu bệnh rất tốt và năng suất rất cao. Được trồng ở những vùng đất khô đầy gió và nắng của vùng Cao Nguyên.</p>
+                    <img id="img" src="images/cherry.jpg" width="550px">
+                    <p>Cách chế biến mới là điểm tạo ra sự khác biệt giữa Arabica va Robusta. Quả Arabica được thu hoạch, rồi lên men (ngâm nước cho nở...) rồi rửa sạch rồi sấy. Chính vì thế, vị của Arabica hơi chua, và đây cũng được coi là 1 đặc điểm cảm quan của loại cà phê này. Vì thế, nói đến "hậu vị" của cà phê là có thật, nhưng không phải là vị chua, mà phải chuyển từ chua sang đắng (kiểu socola ý, sau khi nuốt mới là cà phê ngon). Người ta thường ví vị chua đó giống như khi mình ăn chanh, sẽ thấy rất chua, nhưng lập tức thấy được vị đắng của vỏ. Cách cảm nhận vị chua của cà phê cũng như vậy.</p>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div id="culi">
+                    <h1>CÀ PHÊ CULI</h1>
+                    <h4>____________________________________________________________________________________________________________________</h4>
+                    <h4>MAY 07, 2017</h4>
+                    <br>
+                    <p>Nằm trong số các loại cà phê Việt Nam có hạt no tròn. Đặc biệt là trong một trái chỉ có duy nhất một hạt. Vị đắng gắt, hương thơm say đắm, hàm lượng cafein cao, nuớc màu đen sánh, đó là quá trình kết hợp tinh túy của sự duy nhất.</p>
+                    <img id="img" src="images/culi.jpg" width="550px">
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div id="moka">
+                    <h1>CÀ PHÊ MOKA</h1>
+                    <h4>____________________________________________________________________________________________________________________</h4>
+                    <h4>MAY 01, 2017</h4>
+                    <br>
+                    <p>Moka là một trong các loại cà phê nổi tiếng thuộc chi Arabica, được người Pháp di thực từ những năm 30 của thế kỉ trước, trồng ở Đà Lạt – Lâm Đồng.</p>
+                    <br>
+                    <p>Trong các họ, giống cà phê này khó trồng nhất, đòi hỏi công chăm sóc rất kỹ, dể bị sâu bệnh, cần có điều kiện môi trường lẫn kỹ thuật chăm bón đặc thù, nhưng năng xuất lại rất ít. Cây cà phê Moka chỉ có thể sinh truởng và phát triển ở độ cao từ 1500m nên rất ít nơi trồng được. Hằng năm nước ta xuất khẩu trên một triệu tấn cà phê hầu như phần lớn là cà phê Robusta trồng ở Buôn Mê Thuộc và một số tỉnh khác. Cho nên, ở Việt Nnam Moka là cà phê quý hiếm, luôn có giá cao hơn các loại hạt cafe khác. Có thể thấy, không có nhiều người chúng ta có dịp thưởng Moka nguyên chất, dù trên thế giới tiêu thụ đến 80% cà phê Arabica, Moka.</p>
+                    <img id="img" src="images/moka.jpg" width="550px">
+                    <br>
+                    <p>Càng lên cao, cộng thêm với điều kiện thổ nhưỡng, canh tác phù hợp thì hương vị và chất lượng của Moka càng tuyệt vời. Chỉ ở vùng đất thuộc Thành phố Đà Lạt với độ cao 1600m là cà phê Moka thơm ngon nhất. Có thể nói Moka là hoàng hậu trong vương quốc các loại cafe, hạt Moka lớn và đẹp hơn nhiều so với giống khác, hương thơm của nó rất đặc biệt, rất sang trọng, ngây ngất, vị hơi chua một cách thanh thoát, dành cho người sành điệu. Một khi đã vui hưởng được hương vị đích thực của Moka rồi, người ta sẽ luôn nhớ đến nó hơn bất kỳ các loại cà phê nào. Moka thơm quý phái và có vị đặc trưng là khẩu vị lựa chọn hàng đầu của các nước Châu Âu và Mỹ.</p>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <h2>THE IT COFFEE</h2>
+        <p>484 Le Van Viet, District 9, HCMC</p>
+        <p>Hotline: 08 00 000 000</p>
+        <hr/>
+        <br/>
+        <p id="copyrighted">© 2017 The IT Coffee. All Rights Reserved.</p>
+    </div>
+    <!--<script>
+        alert("Hello");
+    </script> -->
+</body>
+
+</html>

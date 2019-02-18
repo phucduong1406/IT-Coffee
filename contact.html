@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact - The IT Coffee</title>
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Baloo+Tamma|Homemade+Apple|Francois+One|Montserrat|Muli" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url("fonts/muli.ttf");
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            color: #343536;
+            font-family: myFont, sans-serif;
+        }
+        button {
+            border: none;
+            padding: 0.6em 1.2em;
+            background: #c0392b;
+            color: #fff;
+            font-family: myFont, sans-serif;
+            font-size: 1em;
+            letter-spacing: 1px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 3px 2px;
+        }
+        button:hover {
+            background-color: #a5281b;
+        }
+        /*HEADER*/
+        #header {
+            background: #343536;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        #logo {
+            float: left;
+            padding-top: 3px;
+        }
+        #menu {
+            float: right;
+        }
+        #menu ul {
+            background: #343536;
+            list-style-type: none;
+            text-align: center;
+            width: 100%;
+        }
+        #menu li {
+            display: inline-block;
+            width: 110px;
+            height: 60px;
+            line-height: 60px;
+            /*bằng height để canh giữa*/
+            position: relative;
+        }
+        #menu a {
+            text-decoration: none;
+            /*bỏ under line*/
+            color: #fff;
+            display: block;
+        }
+        #menu a:hover {
+            background: #fff;
+            /*background khi rê chuột*/
+            color: #343536;
+            /*color khi rê chuột*/
+        }
+        .sub_menu {
+            display: none;
+            position: absolute;
+        }
+        #menu li:hover .sub_menu {
+            display: block;
+        }
+        /*CONTENT*/
+        #div_1 {
+            height: auto;
+            position: relative;
+            margin-bottom: -6px;
+            /*xóa cái trắng thừa dưới*/
+        }
+        #title {
+            color: white;
+            font-family: "Archivo Black", "Montserrat", sans-serif;
+            font-size: 50pt;
+            cursor: pointer;
+            /*đổi con trỏ chuột khi di chuyển đến*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            -moz-transition: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+        }
+        #title:hover {
+            text-decoration-line: overline;
+        }
+        #div_2 {
+            height: 340px;
+            background-image: url("images/contact.jpg");
+        }
+        #div_2 a {
+            text-decoration: none;
+            color: #343536;
+            position: relative;
+            top: 272px;
+            left: 1070px;
+        }
+        #div_2 a:hover {
+            text-decoration: underline;
+            color: #e74c3c;
+        }
+        #div_2 form {
+            position: relative;
+            top: 190px;
+            left: 600px;
+        }
+        #email {
+            padding: 5px 10px;
+            font-family: myFont;
+            font-size: 12pt;
+            font-weight: bold;
+            color: #343536;
+            background-color: #fff;
+            border: 3px solid #343536;
+            /*border-radius: 20px;*/
+        }
+        #send {
+            padding: 5px 20px;
+            text-align: center;
+            font-family: myFont;
+            font-size: 12pt;
+            font-weight: bold;
+            color: #fff;
+            background-color: #343536;
+            border: 3px solid #343636;
+            /*border-radius: 20px;*/
+            cursor: pointer;
+        }
+        #send:hover {
+            color: #fff;
+            border-color: #e74c3c;
+            background-color: #e74c3c;
+        }
+        #div_4 {
+            position: relative;
+            top: -4px;
+            height: 440px;
+            background: url("images/contact_3.jpg");
+            text-align: center;
+        }
+        #div_4 h1 {
+            position: relative;
+            top: 75px;
+            color: #e74c3c;
+        }
+        #div_4 a {
+            text-decoration-line: none;
+        }
+        #div_4 #icon {
+            height: 200px;
+        }
+        #div_4 img {
+            margin: 125px 15px;
+            transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -webkit-transform: all 0.5s;
+        }
+        #fb:hover, #ig:hover, #yt:hover, #fr:hover, #tw:hover, #sk:hover{
+            transform: rotate(360deg);
+            opacity: 0.8;
+        }
+        #div_4 p {
+            padding: 4px;
+            position: relative;
+            top: 70px;
+        }
+        #div_5 {
+            line-height: 20px;
+                        margin-top: -26px;
+            height: 150px;
+            padding: 50px 150px;
+            overflow: auto;
+        }
+        #div_5 a{
+            
+            color: #e74c3c;
+        }
+        #div_5 form {
+            position: relative;
+            top: 35px;
+            left: 50px;
+        }
+        #div_5 .left {
+
+            float: left;
+            width: 85%;
+        }
+        #div_5 .right {
+            margin-top: -68px;
+            float: right;
+            width: 10%;
+        }
+        /*FOOTER*/
+        #footer {
+            position: relative;
+            top: -4px;
+            padding: 25px;
+            color: white;
+            background: #343536;
+            height: 200px;
+            text-align: center;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /*để padding k bị tràn ra ngoài*/
+        }
+        #footer p {
+            padding: 7px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /*để padding k bị tràn ra ngoài*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <!--<img src="http://bit.ly/2pLPVew" alt="The IT Coffee" width="260" height="50px"/>-->
+            <img src="images/logo.jpg" alt="The IT Coffee" width="260" height="50px" />
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html"><b>HOME</b></a>
+
+                </li>
+                <li><a href="about.html"><b>ABOUT</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="about.html#div_2"><b>HISTORY</b></a>
+                        </li>
+                        <li><a href="about.html#div_2"><b>OPENING H.</b></a>
+                        </li>
+                        <li><a href="about.html#div_2"><b>LOCATION</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="menu.html"><b>MENU</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="menu.html#drink"><b>DRINK</b></a>
+                        </li>
+                        <li><a href="menu.html#food"><b>FOOD</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="space.html"><b>SPACE</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="space.html#div_3"><b>GARDEN</b></a>
+                        </li>
+                        <li><a href="space.html#div_4"><b>ROOM</b></a>
+                        </li>
+                        <li><a href="space.html#div_5"><b>ROOFTOP</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="service.html"><b>SERVICE</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="service.html#div_3"><b>BIRTHDAY</b></a>
+                        </li>
+                        <li><a href="service.html#div_4"><b>TRAINING</b></a>
+                        </li>
+                        <li><a href="service.html#div_5"><b>OFFLINE</b></a>
+                        </li>
+                        <li><a href="service.html#div_6"><b>OTHERS</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="news.html"><b>NEWS</b></a>
+                </li>
+                <li><a href="contact.html"><b>CONTACT</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="contact.html#div_3"><b>CONTACT</b></a>
+                        </li>
+                        <li><a href="contact.html#div_3"><b>COMMENT</b></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="contain">
+        <div class="md-modal md-effect-15" id="modal-15">
+            <div class="md-content">
+                <h3><b>MESSAGE</b></h3>
+                <div>
+                    <p>We have received your email address.</p>
+                    <br>
+                    <button class="md-close">CLOSE</button>
+                </div>
+            </div>
+        </div>
+        <div id="div_1">
+            <img id="banner" src="images/banner_contact.jpg" alt="Contact" width="100%">
+            <h1 id="title">CONTACT</h1>
+        </div>
+        <div id="div_2">
+            <form>
+                <input id="email" value="Email address" type="text" size="30px">
+                <input class="md-trigger" id="send" value="Send" size="3px" data-modal="modal-15">
+            </form>
+            <a href="mailto:hi@theitcoffee">HI@THEITCOFFEE.VN</a>
+            <script src="js/classie.js"></script>
+            <script src="js/modalEffects.js"></script>
+        </div>
+        <div id="div_3">
+            <img src="images/contact_2.jpg" alt="Contact" width="100%">
+        </div>
+        <div id="div_4">
+            <h1>STAY CONNECTED</h1>
+            <div id="icon">
+                <a href="https://www.facebook.com/theitcoffee" target="_blank">
+                    <img id="fb" src="images/fb.png" width="50px">
+                </a>
+                <a href="https://www.instagram.com/theitcoffee">
+                    <img id="ig" src="images/ig.png" width="50px">
+                </a>
+                <a href="https://www.twitter.com/theitcoffee">
+                    <img id="tw" src="images/tw.png" width="50px">
+                </a>
+                <a href="https://www.youtube.com/user/theitcoffee">
+                    <img id="yt" src="images/yt.png" width="50px">
+                </a>
+                <a href="https://www.youtube.com/user/theitcoffee">
+                    <img id="sk" src="images/sk.png" width="50px">
+                </a>
+                <a href="https://www.youtube.com/user/theitcoffee">
+                    <img id="fr" src="images/fr.png" width="50px">
+                </a>
+            </div>
+            <p>Explore the website, leave us some feedback, or feel free to contact us to learn more.</p>
+            <p>We look forward to hearing from you.</p>
+        </div>
+        <div id="div_5">
+            <p>Sign in with <a href="https://fb.com">facebook</a> or <a href="https://accounts.google.com">gmail</a> and tell us what you think.</p>
+            <p>Thank you very much!!</p>
+            <div class="left">
+                <form>
+                    <input id="email" value="Comment..." type="text" size="35px">
+                    <input id="send" type="submit" value="Send" size="3px">
+                    <input id="send" type="reset" name="reset">
+                </form>
+            </div>
+            <div class="right">
+                <img src="images/CMT.png" width="70px">
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <h2>THE IT COFFEE</h2>
+        <p>484 Le Van Viet, District 9, HCMC</p>
+        <p>Hotline: 08 00 000 000</p>
+        <hr/>
+        <br/>
+        <p id="copyrighted">© 2017 The IT Coffee. All Rights Reserved.</p>
+    </div>
+    <!--<script>
+        alert("Hello");
+    </script> -->
+
+</html>

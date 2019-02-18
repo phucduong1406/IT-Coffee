@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Space - The IT Coffee</title>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Baloo+Tamma|Homemade+Apple|Francois+One|Montserrat|Muli" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url("fonts/muli.ttf");
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            color: #343536;
+            font-family: myFont, sans-serif;
+        }
+        /*HEADER*/
+        #header {
+            background: #343536;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        #logo {
+            float: left;
+            padding-top: 3px;
+        }
+        #menu {
+            float: right;
+        }
+        #menu ul {
+            background: #343536;
+            list-style-type: none;
+            text-align: center;
+            width: 100%;
+        }
+        #menu li {
+            display: inline-block;
+            width: 110px;
+            height: 60px;
+            line-height: 60px;
+            /*bằng height để canh giữa*/
+            position: relative;
+        }
+        #menu a {
+            text-decoration: none;
+            /*bỏ under line*/
+            color: #fff;
+            display: block;
+        }
+        #menu a:hover {
+            background: #fff;
+            /*background khi rê chuột*/
+            color: #343536;
+            /*color khi rê chuột*/
+        }
+        .sub_menu {
+            display: none;
+            position: absolute;
+        }
+        #menu li:hover .sub_menu {
+            display: block;
+        }
+        /*CONTENT*/
+        #div_1 {
+            height: auto;
+            position: relative;
+            margin-bottom: -6px;
+            /*xóa cái trắng thừa dưới*/
+        }
+        #title {
+            color: white;
+            font-family: "Archivo Black", "Montserrat", sans-serif;
+            font-size: 50pt;
+            cursor: pointer;
+            /*đổi con trỏ chuột khi di chuyển đến*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            -moz-transition: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+        }
+        #title:hover {
+            text-decoration-line: overline;
+        }
+        #div_2 {
+            height: 340px;
+            background-image: url("images/bg_space_texture_3.jpg");
+            background-repeat: repeat;
+            text-align: center;
+        }
+        #div_2 h1 {
+            color: #e74c3c;
+            font-family: "Homemade Apple";
+            padding-top: 40px;
+            padding-bottom: 20px;
+        }
+        #div_2 p {
+            font-size: 13pt;
+            line-height: 32px;
+            padding: 7px 150px;
+        }
+        #div_3,
+        #div_4,
+        #div_5 {
+            color: #343536;
+            font-family: "Montserrat", sans-serif;
+            background: white;
+            overflow: auto;
+            /*clear float*/
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        .pad {
+            width: 674px;
+            box-sizing: border-box;
+            padding: 10px;
+            line-height: 32px;
+            text-align: center;
+        }
+        h2.pad {
+            padding-top: 100px;
+        }
+        /*FOOTER*/
+        #footer {
+            position: relative;
+            padding: 25px;
+            color: white;
+            background: #343536;
+            height: 200px;
+            text-align: center;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /*để padding k bị tràn ra ngoài*/
+        }
+        #footer p {
+            padding: 7px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /*để padding k bị tràn ra ngoài*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <!--<img src="http://bit.ly/2pLPVew" alt="The IT Coffee" width="260" height="50px"/>-->
+            <img src="images/logo.jpg" alt="The IT Coffee" width="260" height="50px" />
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html"><b>HOME</b></a>
+
+                </li>
+                <li><a href="about.html"><b>ABOUT</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="about.html#div_2"><b>HISTORY</b></a>
+                        </li>
+                        <li><a href="about.html#div_2"><b>OPENING H.</b></a>
+                        </li>
+                        <li><a href="about.html#div_2"><b>LOCATION</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="menu.html"><b>MENU</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="menu.html#drink"><b>DRINK</b></a>
+                        </li>
+                        <li><a href="menu.html#food"><b>FOOD</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="space.html"><b>SPACE</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="space.html#div_3"><b>GARDEN</b></a>
+                        </li>
+                        <li><a href="space.html#div_4"><b>ROOM</b></a>
+                        </li>
+                        <li><a href="space.html#div_5"><b>ROOFTOP</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="service.html"><b>SERVICE</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="service.html#div_3"><b>BIRTHDAY</b></a>
+                        </li>
+                        <li><a href="service.html#div_4"><b>TRAINING</b></a>
+                        </li>
+                        <li><a href="service.html#div_5"><b>OFFLINE</b></a>
+                        </li>
+                        <li><a href="service.html#div_6"><b>OTHERS</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="news.html"><b>NEWS</b></a>
+                </li>
+                <li><a href="contact.html"><b>CONTACT</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="contact.html#div_3"><b>CONTACT</b></a>
+                        </li>
+                        <li><a href="contact.html#div_3"><b>COMMENT</b></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="contain">
+        <div id="div_1">
+            <img id="banner" src="images/banner_space.jpg" alt="Contact" width="100%">
+            <h1 id="title">SPACE</h1>
+        </div>
+        <div id="div_2">
+            <h1>Coffee with nice space</h1>
+            <p>Đến với The Coffee IT, chúng tôi sẽ mang đến cho bạn một cảm giác thật sự thoải mái. Không gian thoáng mát và cách trang trí đơn giản nhưng lại vô cùng độc đáo, ấn tượng.</p>
+            <p>Còn gì tuyệt vời hơn khi vừa nhâm nhi một ly cà phê cực chất, hay những loại nước vừa ngon, vừa tốt cho sức khỏe, lại vừa được ngắm nhìn cảnh vật tĩnh lặng yên bình chung quanh, bạn sẽ cảm nhận được những giây phút thư thái và bình yên.</p>
+        </div>
+        <div id="div_3">
+            <div class="left">
+                <h2 class="pad">GARDEN</h2>
+                <p class="pad">The garden of the cafe is extremely cool, pleasant</p>
+            </div>
+            <div class="right">
+                <img class="right" src="images/space_1.jpg" alt="Intro" width="674px" />
+            </div>
+        </div>
+        <div id="div_4">
+            <div class="left">
+                <img class="right" src="images/space_2.jpg" alt="Intro" width="674px" />
+            </div>
+            <div class="right">
+                <h2 class="pad">ROOM</h2>
+                <p class="pad">The space inside is extremely quiet and cozy, suitable to relieve tension after days of study, work stress tired</p>
+            </div>
+        </div>
+        <div id="div_5">
+            <div class="left">
+                <h2 class="pad">ROOFTOP</h2>
+                <p class="pad">The rooftop is very cool, suitable for viewing from above</p>
+            </div>
+            <div class="right">
+                <img class="right" src="images/space_3.jpg" alt="Intro" width="674px" />
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <h2>THE IT COFFEET</h2>
+        <p>484 Le Van Viet, District 9, HCMC</p>
+        <p>Hotline: 08 00 000 000</p>
+        <hr/>
+        <br/>
+        <p id="copyrighted">© 2017 IT The Coffee. All Rights Reserved.</p>
+    </div>
+    <!--<script>
+        alert("Hello");
+    </script> -->
+</body>
+
+</html>

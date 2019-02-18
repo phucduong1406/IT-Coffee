@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Service - The IT Coffee</title>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Baloo+Tamma|Homemade+Apple|Francois+One|Montserrat|Muli" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url("fonts/muli.ttf");
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            color: #343536;
+            font-family: myFont, sans-serif;
+        }
+        /*HEADER*/
+        #header {
+            background: #343536;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        #logo {
+            float: left;
+            padding-top: 3px;
+        }
+        #menu {
+            float: right;
+        }
+        #menu ul {
+            background: #343536;
+            list-style-type: none;
+            text-align: center;
+            width: 100%;
+        }
+        #menu li {
+            display: inline-block;
+            width: 110px;
+            height: 60px;
+            line-height: 60px;
+            /*bằng height để canh giữa*/
+            position: relative;
+        }
+        #menu a {
+            text-decoration: none;
+            /*bỏ under line*/
+            color: #fff;
+            display: block;
+        }
+        #menu a:hover {
+            background: #fff;
+            /*background khi rê chuột*/
+            color: #343536;
+            /*color khi rê chuột*/
+        }
+        .sub_menu {
+            display: none;
+            position: absolute;
+        }
+        #menu li:hover .sub_menu {
+            display: block;
+        }
+        /*CONTENT*/
+        #div_1 {
+            height: auto;
+            position: relative;
+            margin-bottom: -6px;
+            /*xóa cái trắng thừa dưới*/
+        }
+        #title {
+            color: white;
+            font-family: "Archivo Black", "Montserrat", sans-serif;
+            font-size: 50pt;
+            cursor: pointer;
+            /*đổi con trỏ chuột khi di chuyển đến*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            -moz-transition: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+        }
+        #title:hover {
+            text-decoration-line: overline;
+        }
+        #div_2 {
+            background-image: url("images/bg_service.jpg");
+            line-height: 28px;
+            padding: 75px 175px;
+            color: #343536;
+            font-family: myFont, sans-serif;
+            height: 450px;
+            text-align: center;
+        }
+        #div_2 a {
+            text-decoration-line: none;
+        }
+        #div_2 #icon {
+            height: 200px;
+        }
+        #div_2 img {
+            margin: 40px 25px;
+            transition: all 0.1s;
+            -moz-transition: all 0.1s;
+            -webkit-transform: all 0.1s;
+        }
+        #div_2 #user:hover, #div_2 #briefcase:hover, #div_2 #calendar:hover, #div_2 #puzzle:hover {
+            margin: 50px;
+            transform: scale(1.4);  /*phóng to*/
+            /*transform: rotate(20deg);  /*20 độ*/
+        }
+        #div_2 h2 {
+            color: #e74c3c;
+            font-family: "Homemade Apple";
+            font-size: 25pt;
+            padding-top: 100px;
+            padding-bottom: 40px;
+        }
+        #div_2 p {
+            padding: 0px 150px;
+        }
+        #div_3,
+        #div_4,
+        #div_5,
+        #div_6 {
+            line-height: 30px;
+            padding: 50px;
+            overflow: auto;
+            text-indent: 50px;
+        }
+        #div_3 h2,
+        #div_4 h2,
+        #div_5 h2,
+        #div_6 h2 {
+            color: #e74c3c;
+        }
+        #div_4,
+        #div_6 {
+            background-image: url("images/bg_service_2.jpg");
+            background-repeat: repeat;
+        }
+        #div_3 .left,
+        #div_5 .left {
+            float: left;
+            width: 60%;
+        }
+        #div_3 .right,
+        #div_5 .right {
+            float: right;
+            width: 35%;
+        }
+        #div_4 .left,
+        #div_4 .left {
+            float: left;
+            width: 35%;
+        }
+        #div_4 .right,
+        #div_6 .right {
+            float: right;
+            width: 60%;
+        }
+        /*FOOTER*/
+        #footer {
+            position: relative;
+            padding: 25px;
+            color: white;
+            background: #343536;
+            height: 200px;
+            text-align: center;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /*để padding k bị tràn ra ngoài*/
+        }
+        #footer p {
+            padding: 7px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /*để padding k bị tràn ra ngoài*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <!--<img src="http://bit.ly/2pLPVew" alt="The IT Coffee" width="260" height="50px"/>-->
+            <img src="images/logo.jpg" alt="The IT Coffee" width="260" height="50px" />
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html"><b>HOME</b></a>
+
+                </li>
+                <li><a href="about.html"><b>ABOUT</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="about.html#div_2"><b>HISTORY</b></a>
+                        </li>
+                        <li><a href="about.html#div_2"><b>OPENING H.</b></a>
+                        </li>
+                        <li><a href="about.html#div_2"><b>LOCATION</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="menu.html"><b>MENU</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="menu.html#drink"><b>DRINK</b></a>
+                        </li>
+                        <li><a href="menu.html#food"><b>FOOD</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="space.html"><b>SPACE</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="space.html#div_3"><b>GARDEN</b></a>
+                        </li>
+                        <li><a href="space.html#div_4"><b>ROOM</b></a>
+                        </li>
+                        <li><a href="space.html#div_5"><b>ROOFTOP</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="service.html"><b>SERVICE</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="service.html#div_3"><b>BIRTHDAY</b></a>
+                        </li>
+                        <li><a href="service.html#div_4"><b>TRAINING</b></a>
+                        </li>
+                        <li><a href="service.html#div_5"><b>OFFLINE</b></a>
+                        </li>
+                        <li><a href="service.html#div_6"><b>OTHERS</b></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="news.html"><b>NEWS</b></a>
+                </li>
+                <li><a href="contact.html"><b>CONTACT</b></a>
+                    <ul class="sub_menu">
+                        <li><a href="contact.html#div_3"><b>CONTACT</b></a>
+                        </li>
+                        <li><a href="contact.html#div_3"><b>COMMENT</b></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="contain">
+        <div id="div_1">
+            <img id="banner" src="images/banner_service.jpg" alt="Contact" width="100%">
+            <h1 id="title">SERVICE</h1>
+        </div>
+        <div id="div_2">
+            <div id="icon">
+                <a href="service.html#div_3">
+                    <img id="user" src="images/users_e74c3c.png" alt="Birthday" width="100px">
+                </a>
+                <a href="service.html#div_4">
+                    <img id="briefcase" src="images/briefcase_e74c3c.png" alt="Training" width="100px">
+                </a>
+                <a href="service.html#div_5">
+                    <img id="calendar" src="images/calendar_e74c3c.png" alt="Offline" width="100px">
+                </a>
+                <a href="service.html#div_6">
+                    <img id="puzzle" src="images/puzzle_e74c3c.png" alt="Other" width="100px">
+                </a>
+            </div>
+            <h2>Wellcome!</h2>
+            <p>Chúng tôi rất hân hạnh khi được đem đến cho bạn những dịch vụ tốt nhất</p>
+            <p>Hãy để tâm hồn bạn được nâng niu, được chìm đắm với những khoảnh khắc ấm áp. Hãy cùng chúng tôi trải nghiệm nhé</p>
+            <p>Hãy cùng chúng tôi trải nghiệm nhé!!!</p>
+        </div>
+        <div id="div_3">
+            <div class="left">
+                <h2>BIRTHDAY</h2>
+                <br>
+                <p>Chúng tôi sẽ mang đến cho bạn một không gian ấm cúng, và những khoảnh khắc đáng nhớ cùng với với bạn bè và người thân trong ngày sinh nhật của bạn.</p>
+                <br>
+                <p>Còn gì tuyệt vời hơn khi buổi sinh nhật của bạn không tổ chức ở một nơi không ồn ào, náo nhiệt mà lại là một nơi yên bình, cách biệt với những thứ hối hả đang diễn ra ngoài kia, nơi mà những người bạn có thể ngồi gần nhau kể cho nhau nghe những câu chuyện, gởi đến nhau những lời chúc ngọt ngào và tận hưởng khoảng không gian bình yên.</p>
+            </div>
+            <div class="right">
+                <img src="images/service_1.png" width="270px" height="270px">
+            </div>
+        </div>
+        <div id="div_4">
+            <div class="right">
+                <h2>TRAINING</h2>
+                <br>
+                <p>Hãy đến với khóa học pha chế cà phê của chúng tôi, đây không phải là một công viêc bình thường mà đó là cả 1 nghệ thuật.</p>
+                <br>
+                <p>Các bạn sẽ trở thành những nghệ sỹ, bạn sẽ cảm nhận được những tinh hoa mà đất trời ban tặng và biến chúng thành những giọt cà phê đậm đà và que thuộc</p>
+            </div>
+            <div class="left">
+                <img src="images/service_2.png" width="270px" height="270px">
+            </div>
+        </div>
+        <div id="div_5">
+            <div class="left">
+                <h2>OFFLINE</h2>
+                <br>
+                <p>Còn gì tuyệt vời hơn khi ngồi nhâm nhi tách cà phê và cảm nhận những nốt trầm bổng ngân nga trong căn phòng tĩnh lặng, nơi mà những lo toang bộn bề của cuộc sống được giũ bỏ và chỉ còn đây ta với những người bạn, nơi mà ta có thể cất tiếng hát trên nền nhạc acoustic của IT COFFEE.</p>
+                <br>
+                <p>Hãy đến với chúng tôi vào lúc 7h giờ tối thứ 7 hằng tuần.</p>
+            </div>
+            <div class="right">
+                <img src="images/service_3.png" width="270px" height="270px">
+            </div>
+        </div>
+        <div id="div_6">
+            <div class="right">
+                <h2>OTHER</h2>
+                <br>
+                <p>Chúng tôi đang và sẽ cải thiện chất lượng các dịch vụ để phục vụ quý khách 1 cách chu đáo nhất, trong thời gian tới chúng tôi sẽ cải thiện không gian và mang đến cho quý khách nhũng dịch vụ mới mẻ và hấp dẫn hơn mong quý khách vẫn luôn ủng hộ và tin yêu quán.</p>
+            </div>
+            <div class="left">
+                <img src="images/service_4.png" width="270px" height="270px">
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <h2>THE IT COFFEE</h2>
+        <p>484 Le Van Viet, District 9, HCMC</p>
+        <p>Hotline: 08 00 000 000</p>
+        <hr/>
+        <br/>
+        <p id="copyrighted">© 2017 The IT Coffee. All Rights Reserved.</p>
+    </div>
+    <!--<script>
+        alert("Hello");
+    </script> -->
+</body>
+
+</html>
